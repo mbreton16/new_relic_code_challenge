@@ -1,3 +1,8 @@
+# Manual additions
+
+*.zip
+.idea/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -35,10 +40,6 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-
-# Manual additions
-
-*.zip
 
 # Unit test / coverage reports
 htmlcov/

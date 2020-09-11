@@ -30,7 +30,7 @@ class MainTest(unittest.TestCase):
     # More of a functional test but helpful in determining if the output is correct.
     def test_run_sequence(self):
         try:
-            with open('pg2009.txt', 'r', encoding='utf-8') as file:
+            with open('test_data/pg2009.txt', 'r', encoding='utf-8') as file:
                 data = file.read()
         except Exception as e:
             print(e)

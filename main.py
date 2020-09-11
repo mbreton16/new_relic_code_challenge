@@ -3,7 +3,7 @@ import re
 import collections
 
 
-# First, determine the files and handle stdin vs a list of CLIs
+# First, determine the files and handle stdin vs a list of CL arguments
 def files_to_parse():
     argument_list = len(sys.argv)
     if argument_list == 1:
@@ -27,7 +27,7 @@ def get_words(text_to_sanitize):
     non_alpha = re.compile(r"[^\w]", re.IGNORECASE) # Match anything that is not a letter or number
     for match in pattern.finditer(text_to_sanitize): # Find words
         next_word = non_alpha.sub("", match.group()).lower()  # Get rid of punctuation, convert to lowercase
-        if next_word:  # Skip blank words with no letters (Punctuation, numbers, etc)
+        if next_word:  # Skip blank words with no letters (Punctuation, etc)
             yield next_word
 
 
@@ -65,4 +65,4 @@ if __name__ == "__main__":
                     data = file.read()
                     run_sequence(data)
             except Exception as e:
-                print (e)
+                print(e)
